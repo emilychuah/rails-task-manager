@@ -51,3 +51,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Simple Form provides a helper to generate form with Bootstrap classes
+gem 'simple_form'

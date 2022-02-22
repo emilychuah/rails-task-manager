@@ -1,0 +1,20 @@
+<%= simple_form_for(task) do |f| %>
+  <div class="form-group">
+    <%= f.input :title, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.input :details, class: 'form-control' %>
+  </div>
+
+  <%# Checks if the task is saved to the DB. If yes, then display "Completed" so that it'll appear in the edit form only. %>
+  <% unless task.new_record? %>
+    <div class="checkbox">
+      <label>
+        <%= f.check_box :completed %> Completed
+      </label>
+    </div>
+  <% end %>
+
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
